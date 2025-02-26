@@ -34,7 +34,19 @@ const buttonVariants = cva(
   },
 );
 
-export interface ButtonProps extends Omit<AntDButtonProps, "size"> {
+export interface ButtonProps
+  extends Omit<
+    AntDButtonProps,
+    | "size"
+    | "type"
+    | "prefixCls"
+    | "shape"
+    | "title"
+    | "icon"
+    | "danger"
+    | "block"
+    | "ghost"
+  > {
   // as?: string;
   class?: string;
   variant?: NonNullable<Parameters<typeof buttonVariants>[0]>["variant"];

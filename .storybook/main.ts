@@ -11,10 +11,13 @@ const config: StorybookConfig = {
     "@storybook/addon-essentials",
     "@chromatic-com/storybook",
     "@storybook/addon-interactions",
+    "storybook-dark-mode",
   ],
   framework: {
     name: "@storybook/vue3-vite",
-    options: {},
+    options: {
+      docgen: "vue-component-meta",
+    },
   },
 };
 export default config;
